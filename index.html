@@ -277,15 +277,15 @@
                             <h4 class="col_span_3">Spouse Name Information</h4>
                             <div class="form_group col_span_3">
                                 <label for="surname">Surname</label>
-                                <input type="text" name="surname">
+                                <input type="text" name="spouse_sname">
                             </div>
                             <div class="form_group col_span_3">
                                 <label for="firstname">Firstname</label>
-                                <input type="text" name="firstname">
+                                <input type="text" name="spouse_fname">
                             </div>
                             <div class="form_group col_span_1" style="flex-direction: row; align-items: center;">
-                                <label for="spousefirstname">Extension</label>
-                                <input type="checkbox" name="spousefirstname" id="spousefnameCbox"  onclick="toggleSelect('spousefnameCbox','spouseSelect')">
+                                <label for="spouseextname">Extension</label>
+                                <input type="checkbox" name="spouseextname" id="spousefnameCbox"  onclick="toggleSelect('spousefnameCbox','spouseSelect')">
                             </div>
                             <div class="form_group col_span_2" style="flex-direction: row; align-items: center;">
                                 <select name="spouseextension" style="display: none; margin-left: 5px; width: 50%;" id="spouseSelect">
@@ -297,8 +297,8 @@
                                 </select>
                             </div>
                             <div class="form_group col_span_3">
-                                <label for="middlename">Middle name</label>
-                                <input type="text" name="middlename">
+                                <label for="spouse_middlename">Middle name</label>
+                                <input type="text" name="spouse_middlename">
                             </div>
                         </div>
                         <div class="section" style="grid-template-columns: repeat(6, 1fr);">
@@ -324,16 +324,16 @@
                         <div class="section col_span_1">
                             <h4 class="col_span_3">Father's Name</h4>
                             <div class="form_group col_span_3">
-                                <label for="surname">Surname</label>
-                                <input type="text" name="surname">
+                                <label for="father_surname">Surname</label>
+                                <input type="text" name="father_surname">
                             </div>
                             <div class="form_group col_span_3">
-                                <label for="firstname">Firstname</label>
-                                <input type="text" name="firstname">
+                                <label for="father_firstname">Firstname</label>
+                                <input type="text" name="father_firstname">
                             </div>
                             <div class="form_group col_span_1" style="flex-direction: row; align-items: center;">
-                                <label for="fatherfirstname">Extension</label>
-                                <input type="checkbox" name="fatherfirstname" id="fatherfnameCbox"  onclick="toggleSelect('fatherfnameCbox','fatherSelect')">
+                                <label for="fatherhasextname">Extension</label>
+                                <input type="checkbox" name="fatherhasextname" id="fatherfnameCbox"  onclick="toggleSelect('fatherfnameCbox','fatherSelect')">
                             </div>
                             <div class="form_group col_span_2" style="flex-direction: row; align-items: center;">
                                 <select name="fatherextension" style="display: none; margin-left: 5px; width: 50%;" id="fatherSelect">
@@ -352,19 +352,19 @@
                         <div class="section col_span_1">
                             <h4 class="col_span_3">Mother's Maiden Name</h4>
                             <div class="form_group col_span_3">
-                                <label for="surname">Surname</label>
-                                <input type="text" name="surname">
+                                <label for="mother_surname">Surname</label>
+                                <input type="text" name="mother_surname">
                             </div>
                             <div class="form_group col_span_3">
-                                <label for="firstname">Firstname</label>
-                                <input type="text" name="firstname">
+                                <label for="mother_firstname">Firstname</label>
+                                <input type="text" name="mother_firstname">
                             </div>
                             <div class="form_group col_span_1" style="flex-direction: row; align-items: center;">
-                                <label for="fatherfirstname">Extension</label>
-                                <input type="checkbox" name="fatherfirstname" id="fatherfnameCbox"  onclick="toggleSelect('fatherfnameCbox','fatherSelect')">
+                                <label for="motherhasextname">Extension</label>
+                                <input type="checkbox" name="motherhasextname" id="motherfnameCbox"  onclick="toggleSelect('motherfnameCbox','motherSelect')">
                             </div>
                             <div class="form_group col_span_2" style="flex-direction: row; align-items: center;">
-                                <select name="fatherextension" style="display: none; margin-left: 5px; width: 50%;" id="fatherSelect">
+                                <select name="motherextension" style="display: none; margin-left: 5px; width: 50%;" id="motherSelect">
                                     <option value="N/A">Select</option>
                                     <option value="junior">JR.</option>
                                     <option value="senior">SR.</option>
@@ -381,7 +381,7 @@
                     <br><br>
                     <div class="form_section" style="display: grid; grid-template-columns: 1fr">
                         <div class="flex_row" style="justify-self: left;">
-                            <input type="checkbox" class="col_span_1" name="fatherfirstname" id="hasChild"  onclick="toggleSelect('hasChild','childSection')">
+                            <input type="checkbox" class="col_span_1" name="haschildren" id="hasChild"  onclick="toggleSelect('hasChild','childSection')">
                             <h3 class="section_label col_span_1" style="margin-left:5px;">Children</h3><br>
                         </div>
                         <div class="section col_span_2" id="childSection" style="display: none;">
@@ -430,7 +430,7 @@
                 <div class="main_section">
                     <h2 class="form_label">Educational Background</h3>
                     <div class="form_section">
-                        <table id="references_table">
+                    <table id="references_table">
                             <tr>
                                 <th rowspan="2">
                                     Level
@@ -439,7 +439,7 @@
                                     Name of School
                                 </th>
                                 <th rowspan="2">
-                                    Basic Education/Degree/Course
+                                    Basic Education / Degree / Course
                                 </th>
                                 <th colspan="2">
                                     Period of Attendance
@@ -460,7 +460,7 @@
                             </tr>
                             <tr class="CSE_row">
                                 <td><p>Elementary</p></td>
-                                <td><input type="text" class="tbl_text"></td>
+                                <td><input type="text" class="tbl_text" style="width: 150px;"></td>
                                 <td><input type="text" class="tbl_text"></td>
                                 <td><input type="text" class="tbl_text"></td>
                                 <td><input type="text" class="tbl_text"></td>
@@ -804,7 +804,7 @@
                     <br>
                     <div class="yes_no">
                         <div class="yes_no_choices" onclick="toggleSelect('yn1a', 'yn1adetails')">
-                            <p class="col_span_2">a. within the third degree?</p>
+                            <p class="col_span_2">Within the third degree?</p>
                             <div class="choice_group">
                                 <input id="yn1a" name="yes_no" value="Yes" type="radio"/>
                                 <label for="yes">YES</label>
@@ -821,7 +821,7 @@
                     </div>
                     <div class="yes_no">
                         <div class="yes_no_choices" onclick="toggleSelect('yn1b', 'yn1bdetails')">
-                            <p class="col_span_2">b. within the fourth degree (for Local Government Unit - Career Employees)?</p>
+                            <p class="col_span_2">Within the fourth degree (for Local Government Unit - Career Employees)?</p>
                             <div class="choice_group">
                                 <input name="yn" id="yn1b" value="Yes" type="radio"/>
                                 <label for="yes">YES</label>
@@ -841,7 +841,7 @@
                     <br>
                     <div class="yes_no">
                         <div class="yes_no_choices" onclick="toggleSelect('yn2a', 'yn2adetails')">
-                            <p class="col_span_2">a. Have you ever been found guilty of any administrative offense?</p>
+                            <p class="col_span_2">Have you ever been found guilty of any administrative offense?</p>
                             <div class="choice_group">
                                 <input id="yn2a" name="yes_no" value="Yes" type="radio"/>
                                 <label for="yes">YES</label>
@@ -858,7 +858,7 @@
                     </div>
                     <div class="yes_no">
                         <div class="yes_no_choices" onclick="toggleSelect('yn2b', 'yn2bdetails')">
-                            <p class="col_span_2">b. Have you been criminally charged before any court?</p>
+                            <p class="col_span_2">Have you been criminally charged before any court?</p>
                             <div class="choice_group">
                                 <input name="yn" id="yn2b" value="Yes" type="radio"/>
                                 <label for="yes">YES</label>
@@ -917,7 +917,7 @@
                 <div class="main_section questionaire">
                     <div class="yes_no">
                         <div class="yes_no_choices" onclick="toggleSelect('yn5a', 'yn5adetails')">
-                            <p class="col_span_2">a. Have you ever been a candidate in a national or local election held within the last year (except Barangay election)?</p>
+                            <p class="col_span_2">Have you ever been a candidate in a national or local election held within the last year (except Barangay election)?</p>
                             <div class="choice_group">
                                 <input id="yn5a" name="yes_no" value="Yes" type="radio"/>
                                 <label for="yes">YES</label>
@@ -934,7 +934,7 @@
                     </div>
                     <div class="yes_no">
                         <div class="yes_no_choices" onclick="toggleSelect('yn5b', 'yn5bdetails')">
-                            <p class="col_span_2">b. Have you resigned from the government service during the three (3)-month period before the last election to promote/actively campaign for a national or local candidate?</p>
+                            <p class="col_span_2">Have you resigned from the government service during the three (3)-month period before the last election to promote/actively campaign for a national or local candidate?</p>
                             <div class="choice_group">
                                 <input name="yn" id="yn5b" value="Yes" type="radio"/>
                                 <label for="yes">YES</label>
@@ -975,7 +975,7 @@
                     <br>
                     <div class="yes_no">
                         <div class="yes_no_choices" onclick="toggleSelect('yn7a', 'yn7adetails')">
-                            <p class="col_span_2">Are you a member of any indigenous group?</p>
+                            <p class="col_span_2">a. Are you a member of any indigenous group?</p>
                             <div class="choice_group">
                                 <input id="yn7a" name="yes_no" value="Yes" type="radio"/>
                                 <label for="yes">YES</label>
@@ -992,7 +992,7 @@
                     </div>
                     <div class="yes_no">
                         <div class="yes_no_choices" onclick="toggleSelect('yn7b', 'yn7bdetails')">
-                            <p class="col_span_2">Are you a person with disability?</p>
+                            <p class="col_span_2">b. Are you a person with disability?</p>
                             <div class="choice_group">
                                 <input name="yn" id="yn7b" value="Yes" type="radio"/>
                                 <label for="yes">YES</label>
@@ -1009,7 +1009,7 @@
                     </div>
                     <div class="yes_no">
                         <div class="yes_no_choices" onclick="toggleSelect('yn7c', 'yn7cdetails')">
-                            <p class="col_span_2">Are you a solo parent??</p>
+                            <p class="col_span_2">c. Are you a solo parent??</p>
                             <div class="choice_group">
                                 <input name="yn" id="yn7c" value="Yes" type="radio"/>
                                 <label for="yes">YES</label>
