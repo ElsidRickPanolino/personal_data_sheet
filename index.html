@@ -47,16 +47,16 @@
                         <div class="section" style="grid-template-columns: repeat(6, 1fr);">
                             <h4 class="col_span_6">Biographical Inforamtion</h4>
                             <div class="form_group col_span_6">
-                                <label for="b-date">Date of birth</label>
-                                <input type="date" name="b-date">
+                                <label for="b-date">Date of birth*</label>
+                                <input type="date" name="b-date" required>
                             </div>
                             <div class="form_group col_span_6">
-                                <label for="b-place">Place of birth</label>
-                                <input type="text" name="b-place">
+                                <label for="b-place">Place of birth*</label>
+                                <input type="text" name="b-place" required>
                             </div>
                             <div class="form_group col_span_3">
-                                <label for="sex">Sex</label>
-                                <select name="sex">
+                                <label for="sex">Sex*</label>
+                                <select name="sex" required>
                                     <option value=""></option>
                                     <option value="male">Male</option>
                                     <option value="female">Female</option>
@@ -64,8 +64,8 @@
                                 </select>
                             </div>
                             <div class="form_group col_span_3">
-                                <label for="civil_status">Civil status</label>
-                                <select name="civil_status">
+                                <label for="civil_status">Civil status*</label>
+                                <select name="civil_status" required>
                                     <option value=""></option>
                                     <option value="single">single</option>
                                     <option value="married">married</option>
@@ -75,16 +75,16 @@
                                 </select>
                             </div>
                             <div class="form_group col_span_2">
-                                <label for="height">Height</label>
-                                <input type="number" name="height">
+                                <label for="height">Height*</label>
+                                <input type="number" name="height" required>
                             </div>
                             <div class="form_group col_span_2">
-                                <label for="weight">Weight</label>
-                                <input type="number" name="weight">
+                                <label for="weight">Weight*</label>
+                                <input type="number" name="weight" required>
                             </div>
                             <div class="form_group col_span_2">
-                                <label for="bloodtype">Blood type</label>
-                                <select id="bloodType" name="bloodType">
+                                <label for="bloodtype">Blood type*</label>
+                                <select id="bloodType" name="bloodType" required>
                                     <option value=""></option>
                                     <option value="A+">A+</option>
                                     <option value="A-">A-</option>
@@ -102,11 +102,11 @@
                     <div class="form_section">
                         <h3 class="section_label">Residence Information</h3>
                         <div class="section col_span_2" style="grid-template-columns: 1fr repeat(4, 2fr) 1fr;">
-                            <h4 class="col_span_6">Citizenship</h4>
+                            <h4 class="col_span_6">Citizenship*</h4>
                             <div class="col_span_6"><br><br></div>
                             <div></div>
                             <div class="radio_group col_span_1">
-                                <input type="radio" value="filipino" name="citizenship" onclick="toggleSelect('dualCitizenship','dualCitizenshipTextbox')">
+                                <input type="radio" value="filipino" name="citizenship" onclick="toggleSelect('dualCitizenship','dualCitizenshipTextbox')" required>
                                 <label>Filipino</label>
                             </div>
                             <div class="radio_group col_span_1">
@@ -161,20 +161,20 @@
                                 <input type="text" name="residential_subvil">
                             </div>
                             <div class="form_group col_span_3">
-                                <label for="residential_bar">Barangay</label>
-                                <input type="text" name="residential_bar">
+                                <label for="residential_bar">Barangay*</label>
+                                <input type="text" name="residential_bar" required>
                             </div>
                             <div class="form_group col_span_3">
-                                <label for="residential_city">City/Municipality</label>
-                                <input type="text" name="residential_city">
+                                <label for="residential_city">City/Municipality*</label>
+                                <input type="text" name="residential_city" required>
                             </div>
                             <div class="form_group col_span_3">
-                                <label for="residential_prov">Province</label>
-                                <input type="text" name="residential_prov">
+                                <label for="residential_prov">Province*</label>
+                                <input type="text" name="residential_prov" required>
                             </div>
                             <div class="form_group col_span_2">
-                                <label for="residential_zip">Zip Code</label>
-                                <input type="text" name="residential_zip">
+                                <label for="residential_zip">Zip Code*</label>
+                                <input type="text" name="residential_zip" required>
                             </div>
                         </div>
                         <div class="section" style="grid-template-columns: repeat(6, 1fr);">
@@ -196,20 +196,20 @@
                                 <input type="text" name="permanent_subvil">
                             </div>
                             <div class="form_group col_span_3">
-                                <label for="residential_bar">Barangay</label>
-                                <input type="text" name="permanent_bar">
+                                <label for="residential_bar">Barangay*</label>
+                                <input type="text" name="permanent_bar" required>
                             </div>
                             <div class="form_group col_span_3">
-                                <label for="residential_city">City/Municipality</label>
-                                <input type="text" name="permanent_city">
+                                <label for="residential_city">City/Municipality*</label>
+                                <input type="text" name="permanent_city" required>
                             </div>
                             <div class="form_group col_span_3">
-                                <label for="residential_prov">Province</label>
-                                <input type="text" name="permanent_prov">
+                                <label for="residential_prov">Province*</label>
+                                <input type="text" name="permanent_prov" required>
                             </div>
                             <div class="form_group col_span_2">
-                                <label for="residential_zip">Zip Code</label>
-                                <input type="text" name="permanent_zip">
+                                <label for="residential_zip">Zip Code*</label>
+                                <input type="text" name="permanent_zip" required>
                             </div>
                         </div>
                     </div>
@@ -238,6 +238,7 @@
                         });
                     </script>
                 </div>
+                <br>
                 <div class="main_section">
                     <h2 class="form_label">Family Backgroud</h3>
                     <div class="form_section">
@@ -365,7 +366,7 @@
                                 </div>
                                 <div class="form_group col_span_1">
                                     <label for="firstname">Birth Date</label>
-                                    <input type="text" name="firstname">
+                                    <input type="date" name="firstname">
                                 </div>
                             </div>
                         </div>
@@ -395,6 +396,7 @@
                         });
                     </script>
                 </div>
+                <br>
                 <div class="main_section">
                     <h2 class="form_label">Educational Background</h3>
                     <div class="form_section">
@@ -475,6 +477,13 @@
             width: 100%;
             border-radius: 1px;
             border: none;
+        }
+        .childFn{
+            background-color: #bebebe;
+            border: 2px solid #888888;
+            height: 30px;
+            width: 60%;
+            justify-self: center;
         }
     </style>
     <script>
