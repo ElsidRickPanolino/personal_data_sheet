@@ -746,6 +746,269 @@
                     </table>
                     <button type="button" onclick="addRow('other_table',3)" style="height: 30px;">Add Row</button>
                 </div>
+                <div class="main_section questionaire">
+                    <p class="Q1">Are you related by consanguinity or affinity to the appointing or recommending authority, or to the chief of bureau or office or to the person who has immediate supervision over you in the Office, Bureau or Department where you will be apppointed,</p>
+                    <br>
+                    <div class="yes_no">
+                        <div class="yes_no_choices" onclick="toggleSelect('yn1a', 'yn1adetails')">
+                            <p class="col_span_2">a. within the third degree?</p>
+                            <div class="choice_group">
+                                <input id="yn1a" name="yes_no" value="Yes" type="radio"/>
+                                <label for="yes">YES</label>
+                            </div>
+                            <div class="choice_group">
+                                <input name="yes_no" value="No" type="radio"/>
+                                <label for="no">NO</label>
+                            </div>
+                        </div>
+                        <div id="yn1adetails" class="if_yes" style="display: none;">
+                            <p>if YES, give details</p>
+                            <input type="text" id="specify">
+                        </div>
+                    </div>
+                    <div class="yes_no">
+                        <div class="yes_no_choices" onclick="toggleSelect('yn1b', 'yn1bdetails')">
+                            <p class="col_span_2">b. within the fourth degree (for Local Government Unit - Career Employees)?</p>
+                            <div class="choice_group">
+                                <input name="yn" id="yn1b" value="Yes" type="radio"/>
+                                <label for="yes">YES</label>
+                            </div>
+                            <div class="choice_group">
+                                <input name="yn" value="No" type="radio"/>
+                                <label for="no">NO</label>
+                            </div>
+                        </div>
+                        <div class="if_yes" id="yn1bdetails" style="display: none;">
+                            <p>if YES, give details</p>
+                            <input type="text" id="specify">
+                        </div>
+                    </div>
+                </div>
+                <div class="main_section questionaire">
+                    <br>
+                    <div class="yes_no">
+                        <div class="yes_no_choices" onclick="toggleSelect('yn2a', 'yn2adetails')">
+                            <p class="col_span_2">a. Have you ever been found guilty of any administrative offense?</p>
+                            <div class="choice_group">
+                                <input id="yn2a" name="yes_no" value="Yes" type="radio"/>
+                                <label for="yes">YES</label>
+                            </div>
+                            <div class="choice_group">
+                                <input name="yes_no" value="No" type="radio"/>
+                                <label for="no">NO</label>
+                            </div>
+                        </div>
+                        <div id="yn2adetails" class="if_yes" style="display: none;">
+                            <p>if YES, give details</p>
+                            <input type="text" id="specify">
+                        </div>
+                    </div>
+                    <div class="yes_no">
+                        <div class="yes_no_choices" onclick="toggleSelect('yn2b', 'yn2bdetails')">
+                            <p class="col_span_2">b. Have you been criminally charged before any court?</p>
+                            <div class="choice_group">
+                                <input name="yn" id="yn2b" value="Yes" type="radio"/>
+                                <label for="yes">YES</label>
+                            </div>
+                            <div class="choice_group">
+                                <input name="yn" value="No" type="radio"/>
+                                <label for="no">NO</label>
+                            </div>
+                        </div>
+                        <div class="if_yes" id="yn2bdetails" style="display: none;">
+                            <p>if YES, give details</p>
+                            <input type="text" id="specify">
+                        </div>
+                    </div>
+                </div>
+                <div class="main_section questionaire">
+                    <br>
+                    <div class="yes_no">
+                        <div class="yes_no_choices" onclick="toggleSelect('yn3a', 'yn3adetails')">
+                            <p class="col_span_2">Have you ever been convicted of any crime or violation of any law, decree, ordinance or regulation by any court or tribunal?</p>
+                            <div class="choice_group">
+                                <input id="yn3a" name="yes_no" value="Yes" type="radio"/>
+                                <label for="yes">YES</label>
+                            </div>
+                            <div class="choice_group">
+                                <input name="yes_no" value="No" type="radio"/>
+                                <label for="no">NO</label>
+                            </div>
+                        </div>
+                        <div id="yn3adetails" class="if_yes" style="display: none;">
+                            <p>if YES, give details</p>
+                            <input type="text" id="specify">
+                        </div>
+                    </div>
+                </div>
+                <div class="main_section questionaire">
+                    <br>
+                    <div class="yes_no">
+                        <div class="yes_no_choices" onclick="toggleSelect('yn4a', 'yn4adetails')">
+                            <p class="col_span_2">Have you ever been separated from the service in any of the following modes: resignation, retirement, dropped from the rolls, dismissal, termination, end of term, finished contract or phased out (abolition) in the public or private sector?</p>
+                            <div class="choice_group">
+                                <input id="yn4a" name="yes_no" value="Yes" type="radio"/>
+                                <label for="yes">YES</label>
+                            </div>
+                            <div class="choice_group">
+                                <input name="yes_no" value="No" type="radio"/>
+                                <label for="no">NO</label>
+                            </div>
+                        </div>
+                        <div id="yn4adetails" class="if_yes" style="display: none;">
+                            <p>if YES, give details</p>
+                            <input type="text" id="specify">
+                        </div>
+                    </div>
+                </div>
+                <div class="main_section questionaire">
+                    <div class="yes_no">
+                        <div class="yes_no_choices" onclick="toggleSelect('yn5a', 'yn5adetails')">
+                            <p class="col_span_2">a. Have you ever been a candidate in a national or local election held within the last year (except Barangay election)?</p>
+                            <div class="choice_group">
+                                <input id="yn5a" name="yes_no" value="Yes" type="radio"/>
+                                <label for="yes">YES</label>
+                            </div>
+                            <div class="choice_group">
+                                <input name="yes_no" value="No" type="radio"/>
+                                <label for="no">NO</label>
+                            </div>
+                        </div>
+                        <div id="yn5adetails" class="if_yes" style="display: none;">
+                            <p>if YES, give details</p>
+                            <input type="text" id="specify">
+                        </div>
+                    </div>
+                    <div class="yes_no">
+                        <div class="yes_no_choices" onclick="toggleSelect('yn5b', 'yn5bdetails')">
+                            <p class="col_span_2">b. Have you resigned from the government service during the three (3)-month period before the last election to promote/actively campaign for a national or local candidate?</p>
+                            <div class="choice_group">
+                                <input name="yn" id="yn5b" value="Yes" type="radio"/>
+                                <label for="yes">YES</label>
+                            </div>
+                            <div class="choice_group">
+                                <input name="yn" value="No" type="radio"/>
+                                <label for="no">NO</label>
+                            </div>
+                        </div>
+                        <div class="if_yes" id="yn5bdetails" style="display: none;">
+                            <p>if YES, give details</p>
+                            <input type="text" id="specify">
+                        </div>
+                    </div>
+                </div>
+                <div class="main_section questionaire">
+                    <br>
+                    <div class="yes_no">
+                        <div class="yes_no_choices" onclick="toggleSelect('yn6a', 'yn6adetails')">
+                            <p class="col_span_2">Have you acquired the status of an immigrant or permanent resident of another country?</p>
+                            <div class="choice_group">
+                                <input id="yn6a" name="yes_no" value="Yes" type="radio"/>
+                                <label for="yes">YES</label>
+                            </div>
+                            <div class="choice_group">
+                                <input name="yes_no" value="No" type="radio"/>
+                                <label for="no">NO</label>
+                            </div>
+                        </div>
+                        <div id="yn6adetails" class="if_yes" style="display: none;">
+                            <p>if YES, give details</p>
+                            <input type="text" id="specify">
+                        </div>
+                    </div>
+                </div>
+                <div class="main_section questionaire">
+                    <p class="Q1">Pursuant to: (a) Indigenous People's Act (RA 8371); (b) Magna Carta for Disabled Persons (RA 7277); and (c) Solo Parents Welfare Act of 2000 (RA 8972), please answer the following items:</p>
+                    <br>
+                    <div class="yes_no">
+                        <div class="yes_no_choices" onclick="toggleSelect('yn7a', 'yn7adetails')">
+                            <p class="col_span_2">Are you a member of any indigenous group?</p>
+                            <div class="choice_group">
+                                <input id="yn7a" name="yes_no" value="Yes" type="radio"/>
+                                <label for="yes">YES</label>
+                            </div>
+                            <div class="choice_group">
+                                <input name="yes_no" value="No" type="radio"/>
+                                <label for="no">NO</label>
+                            </div>
+                        </div>
+                        <div id="yn7adetails" class="if_yes" style="display: none;">
+                            <p>if YES, give details</p>
+                            <input type="text" id="specify">
+                        </div>
+                    </div>
+                    <div class="yes_no">
+                        <div class="yes_no_choices" onclick="toggleSelect('yn7b', 'yn7bdetails')">
+                            <p class="col_span_2">Are you a person with disability?</p>
+                            <div class="choice_group">
+                                <input name="yn" id="yn7b" value="Yes" type="radio"/>
+                                <label for="yes">YES</label>
+                            </div>
+                            <div class="choice_group">
+                                <input name="yn" value="No" type="radio"/>
+                                <label for="no">NO</label>
+                            </div>
+                        </div>
+                        <div class="if_yes" id="yn7bdetails" style="display: none;">
+                            <p>if YES, give details</p>
+                            <input type="text" id="specify">
+                        </div>
+                    </div>
+                    <div class="yes_no">
+                        <div class="yes_no_choices" onclick="toggleSelect('yn7c', 'yn7cdetails')">
+                            <p class="col_span_2">Are you a solo parent??</p>
+                            <div class="choice_group">
+                                <input name="yn" id="yn7c" value="Yes" type="radio"/>
+                                <label for="yes">YES</label>
+                            </div>
+                            <div class="choice_group">
+                                <input name="yn" value="No" type="radio"/>
+                                <label for="no">NO</label>
+                            </div>
+                        </div>
+                        <div class="if_yes" id="yn7cdetails" style="display: none;">
+                            <p>if YES, give details</p>
+                            <input type="text" id="specify">
+                        </div>
+                    </div>
+                </div>
+                <div class="main_section">
+                    <h2 class="form_label">References</h3>
+                    <table id="references_table">
+                        <tr>
+                            <th>
+                                Name
+                            </th>
+                            <th>
+                                Address
+                            </th>
+                            <th>
+                                Tel. No.
+                            </th>
+                        </tr>
+                        <tr class="CSE_row">
+                            <td><input type="text" class="tbl_text"></td>
+                            <td><input type="text" class="tbl_text"></td>
+                            <td><input type="text" class="tbl_text"></td>
+                        </tr>
+                        <tr class="CSE_row">
+                            <td><input type="text" class="tbl_text"></td>
+                            <td><input type="text" class="tbl_text"></td>
+                            <td><input type="text" class="tbl_text"></td>
+                        </tr>
+                        <tr class="CSE_row">
+                            <td><input type="text" class="tbl_text"></td>
+                            <td><input type="text" class="tbl_text"></td>
+                            <td><input type="text" class="tbl_text"></td>
+                        </tr>
+                        <tr class="CSE_row">
+                            <td><input type="text" class="tbl_text"></td>
+                            <td><input type="text" class="tbl_text"></td>
+                            <td><input type="text" class="tbl_text"></td>
+                        </tr>
+                    </table>
+                    <button type="button" onclick="addRow('references_table',3)" style="height: 30px;">Add Row</button>
+                </div>
             </form>
         </div>
     </div>
@@ -758,8 +1021,6 @@
         }
         p{
             text-align: left;
-            background-color: rgba(54, 54, 54, 0.26);
-            font-size: 90%;
         }
         .table_input{
             height: 30px;
@@ -790,6 +1051,29 @@
         }
         .tbl_text_p{
             background-color: #00000000;
+        }
+        .choice_group{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .yes_no_choices{
+            display: grid; grid-template-columns: 1fr 1fr;
+            margin: 30px 5px;
+            min-width: 100%;
+            margin: 20px 10px 5px 10px;
+        }
+        .yes_no{
+            margin-bottom: 20px;
+            width: 60%;
+        }
+        .questionaire{
+            padding: 20px 5%;
+            align-items: center;
+        }
+        .Q1{
+            margin: 20px 10px
         }
     </style>
     <script>
