@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="content">
+        <br><br>
+        <h1 style="text-align: center;">Personal Data Sheet</h1>
+        <div class="form_container">
+            <form action="">
+                <div class="main_section">
+                    <h2 class="form_label">Personal Information</h3>
+                    <div class="form_section">
+                        <h3 class="section_label">Demographic details</h3>
+                        <div class="section">
+                            <h4 class="col_span_3">Name Information</h4>
+                            <div class="form_group col_span_3">
+                                <label for="surname">Surname*</label>
+                                <input type="text" name="surname" required>
+                            </div>
+                            <div class="form_group col_span_3">
+                                <label for="firstname">Firstname*</label>
+                                <input type="text" name="firstname" required>
+                            </div>
+                            <div class="form_group col_span_1" style="flex-direction: row; align-items: center;">
+                                <label for="firstname">Extension</label>
+                                <input type="checkbox" name="firstname" id="firstnameCheckbox" onclick="toggleSelect('firstnameCheckbox','extensionSelect')">
+                            </div>
+                            <div class="form_group col_span_2" style="flex-direction: row; align-items: center;">
+                                <select name="extension" style="display: none; margin-left: 5px; width: 50%;" id="extensionSelect">
+                                    <option value="N/A">Select</option>
+                                    <option value="junior">JR.</option>
+                                    <option value="senior">SR.</option>
+                                    <option value="the3rd">III</option>
+                                    <option value="the3rd">others...</option>
+                                </select>
+                            </div>
+                            <div class="form_group col_span_3">
+                                <label for="middlename">Middle name</label>
+                                <input type="text" name="middlename">
+                            </div>
+                        </div>
+                        <div class="section" style="grid-template-columns: repeat(6, 1fr);">
+                            <h4 class="col_span_6">Biographical Inforamtion</h4>
+                            <div class="form_group col_span_6">
+                                <label for="b-date">Date of birth</label>
+                                <input type="date" name="b-date">
+                            </div>
+                            <div class="form_group col_span_6">
+                                <label for="b-place">Place of birth</label>
+                                <input type="text" name="b-place">
+                            </div>
+                            <div class="form_group col_span_3">
+                                <label for="sex">Sex</label>
+                                <select name="sex">
+                                    <option value=""></option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form_group col_span_3">
+                                <label for="civil_status">Civil status</label>
+                                <select name="civil_status">
+                                    <option value=""></option>
+                                    <option value="single">single</option>
+                                    <option value="married">married</option>
+                                    <option value="widowed">widowed</option>
+                                    <option value="seperated">separated</option>
+                                    <option value="other">Others</option>
+                                </select>
+                            </div>
+                            <div class="form_group col_span_2">
+                                <label for="height">Height</label>
+                                <input type="number" name="height">
+                            </div>
+                            <div class="form_group col_span_2">
+                                <label for="weight">Weight</label>
+                                <input type="number" name="weight">
+                            </div>
+                            <div class="form_group col_span_2">
+                                <label for="bloodtype">Blood type</label>
+                                <select id="bloodType" name="bloodType">
+                                    <option value=""></option>
+                                    <option value="A+">A+</option>
+                                    <option value="A-">A-</option>
+                                    <option value="B+">B+</option>
+                                    <option value="B-">B-</option>
+                                    <option value="AB+">AB+</option>
+                                    <option value="AB-">AB-</option>
+                                    <option value="O+">O+</option>
+                                    <option value="O-">O-</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="form_section">
+                        <h3 class="section_label">Residence Information</h3>
+                        <div class="section col_span_2" style="grid-template-columns: 1fr repeat(4, 2fr) 1fr;">
+                            <h4 class="col_span_6">Citizenship</h4>
+                            <div class="col_span_6"><br><br></div>
+                            <div></div>
+                            <div class="radio_group col_span_1">
+                                <input type="radio" value="filipino" name="citizenship" onclick="toggleSelect('dualCitizenship','dualCitizenshipTextbox')">
+                                <label>Filipino</label>
+                            </div>
+                            <div class="radio_group col_span_1">
+                                <input type="radio" value="dual citizenship" name="citizenship" id="dualCitizenship"  onclick="toggleSelect('dualCitizenship','dualCitizenshipTextbox')">
+                                <label>Dual Citizenship</label>
+                            </div>
+                            <div class="radio_group col_span_1">
+                                <input type="radio" value="by birth" name="citizenship" onclick="toggleSelect('dualCitizenship','dualCitizenshipTextbox')">
+                                <label>By Birth</label>
+                            </div>
+                            <div class="radio_group col_span_1">
+                                <input type="radio" value="by naturalization" name="citizenship" onclick="toggleSelect('dualCitizenship','dualCitizenshipTextbox')">
+                                <label>By Naturalization</label>
+                            </div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div id="dualCitizenshipTextbox" style="grid-column: span 2; display: none;">
+                                <br>
+                                <label for="dualCitizenshipInput">Specify Dual Citizenship:</label>
+                                <input type="text" id="dualCitizenshipInput" name="dualCitizenshipInput">
+                                <br><br>
+                            </div>
+                        </div>
+                        <!-- Dual citizenship script -->
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function () {
+                                var dualCitizenshipRadio = document.getElementById('dualCitizenship');
+                                var dualCitizenshipTextbox = document.getElementById('dualCitizenshipTextbox');
+                        
+                                // Initial check for the visibility of the textbox
+                                dualCitizenshipTextbox.style.display = dualCitizenshipRadio.checked ? 'block' : 'none';
+                        
+                                dualCitizenshipRadio.addEventListener('change', function () {
+                                    dualCitizenshipTextbox.style.display = dualCitizenshipRadio.checked ? 'block' : 'none';
+                                });
+                            });
+                        </script>
+
+                        <div class="section" style="grid-template-columns: repeat(6, 1fr);">
+                            <h4 class="col_span_6">Residential Address</h4>
+                            <div class="form_group col_span_2">
+                                <label for="residential_no">House No.</label>
+                                <input type="text" name="residential_no">
+                            </div>
+                            <div class="form_group col_span_4">
+                                <label for="residential_street">Street</label>
+                                <input type="text" name="residential_street">
+                            </div>
+                            <div class="form_group col_span_3">
+                                <label for="residential_subvil">Subdivision/Village</label>
+                                <input type="text" name="residential_subvil">
+                            </div>
+                            <div class="form_group col_span_3">
+                                <label for="residential_bar">Barangay</label>
+                                <input type="text" name="residential_bar">
+                            </div>
+                            <div class="form_group col_span_3">
+                                <label for="residential_city">City/Municipality</label>
+                                <input type="text" name="residential_city">
+                            </div>
+                            <div class="form_group col_span_3">
+                                <label for="residential_prov">Province</label>
+                                <input type="text" name="residential_prov">
+                            </div>
+                            <div class="form_group col_span_2">
+                                <label for="residential_zip">Zip Code</label>
+                                <input type="text" name="residential_zip">
+                            </div>
+                        </div>
+                        <div class="section" style="grid-template-columns: repeat(6, 1fr);">
+                            <h4 class="col_span_6">Permanent Address</h4>
+                            <div class="col_span_6 flex_row" style="margin-top: 10px;">
+                                <input type="checkbox" name="permres" style="width: 60px;">
+                                <label for="permres">Same as Residential Address</label>
+                            </div>
+                            <div class="form_group col_span_2">
+                                <label for="residential_no">House No.</label>
+                                <input type="text" name="permanent_no">
+                            </div>
+                            <div class="form_group col_span_4">
+                                <label for="residential_street">Street</label>
+                                <input type="text" name="permanent_street">
+                            </div>
+                            <div class="form_group col_span_3">
+                                <label for="residential_subvil">Subdivision/Village</label>
+                                <input type="text" name="permanent_subvil">
+                            </div>
+                            <div class="form_group col_span_3">
+                                <label for="residential_bar">Barangay</label>
+                                <input type="text" name="permanent_bar">
+                            </div>
+                            <div class="form_group col_span_3">
+                                <label for="residential_city">City/Municipality</label>
+                                <input type="text" name="permanent_city">
+                            </div>
+                            <div class="form_group col_span_3">
+                                <label for="residential_prov">Province</label>
+                                <input type="text" name="permanent_prov">
+                            </div>
+                            <div class="form_group col_span_2">
+                                <label for="residential_zip">Zip Code</label>
+                                <input type="text" name="permanent_zip">
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function () {
+                            // Get the checkbox and address fields
+                            const checkbox = document.querySelector('input[name="permres"]');
+                            const resFields = document.querySelectorAll('[name^="residential_"]');
+                            const permFields = document.querySelectorAll('[name^="permanent_"]');
+                            
+                            // Function to copy values from residential to permanent fields
+                            function copyAddress() {
+                                if (checkbox.checked) {
+                                    resFields.forEach((field, index) => {
+                                        permFields[index].value = field.value;
+                                    });
+                                } else {
+                                    permFields.forEach(field => {
+                                        field.value = '';
+                                    });
+                                }
+                            }
+                            
+                            // Add event listener to the checkbox
+                            checkbox.addEventListener('change', copyAddress);
+                        });
+                    </script>
+                </div>
+                <div class="main_section">
+                    <h2 class="form_label">Family Backgroud</h3>
+                    <div class="form_section">
+                        <h3 class="section_label">Spouse</h3>
+                        <div class="section col_span_1">
+                            <h4 class="col_span_3">Spouse Name Information</h4>
+                            <div class="form_group col_span_3">
+                                <label for="surname">Surname</label>
+                                <input type="text" name="surname">
+                            </div>
+                            <div class="form_group col_span_3">
+                                <label for="firstname">Firstname</label>
+                                <input type="text" name="firstname">
+                            </div>
+                            <div class="form_group col_span_1" style="flex-direction: row; align-items: center;">
+                                <label for="spousefirstname">Extension</label>
+                                <input type="checkbox" name="spousefirstname" id="spousefnameCbox"  onclick="toggleSelect('spousefnameCbox','spouseSelect')">
+                            </div>
+                            <div class="form_group col_span_2" style="flex-direction: row; align-items: center;">
+                                <select name="spouseextension" style="display: none; margin-left: 5px; width: 50%;" id="spouseSelect">
+                                    <option value="N/A">Select</option>
+                                    <option value="junior">JR.</option>
+                                    <option value="senior">SR.</option>
+                                    <option value="the3rd">III</option>
+                                    <option value="the3rd">others...</option>
+                                </select>
+                            </div>
+                            <div class="form_group col_span_3">
+                                <label for="middlename">Middle name</label>
+                                <input type="text" name="middlename">
+                            </div>
+                        </div>
+                        <div class="section" style="grid-template-columns: repeat(6, 1fr);">
+                            <h4 class="col_span_6">Spouse details</h4>
+                            <div class="form_group col_span_6">
+                                <label for="spouse_bus_name">Spouse Business Name</label>
+                                <input type="text" name="spouse_bus_name">
+                            </div>
+                            <div class="form_group col_span_6">
+                                <label for="spouse_bus_add">Business Address</label>
+                                <input type="text" name="spouse_bus_add">
+                            </div>
+                            <div class="form_group col_span_6">
+                                <label for="spouse_tel_no">Telephone number</label>
+                                <input type="text" name="spouse_tel_no">
+                            </div>
+                        </div>
+
+                    </div>
+                    <br><br>
+                    <div class="form_section">
+                        <h3 class="section_label">Parents</h3>
+                        <div class="section col_span_1">
+                            <h4 class="col_span_3">Father's Name</h4>
+                            <div class="form_group col_span_3">
+                                <label for="surname">Surname</label>
+                                <input type="text" name="surname">
+                            </div>
+                            <div class="form_group col_span_3">
+                                <label for="firstname">Firstname</label>
+                                <input type="text" name="firstname">
+                            </div>
+                            <div class="form_group col_span_1" style="flex-direction: row; align-items: center;">
+                                <label for="fatherfirstname">Extension</label>
+                                <input type="checkbox" name="fatherfirstname" id="fatherfnameCbox"  onclick="toggleSelect('fatherfnameCbox','fatherSelect')">
+                            </div>
+                            <div class="form_group col_span_2" style="flex-direction: row; align-items: center;">
+                                <select name="fatherextension" style="display: none; margin-left: 5px; width: 50%;" id="fatherSelect">
+                                    <option value="N/A">Select</option>
+                                    <option value="junior">JR.</option>
+                                    <option value="senior">SR.</option>
+                                    <option value="the3rd">III</option>
+                                    <option value="the3rd">others...</option>
+                                </select>
+                            </div>
+                            <div class="form_group col_span_3">
+                                <label for="middlename">Middle name</label>
+                                <input type="text" name="middlename">
+                            </div>
+                        </div>
+                        <div class="section col_span_1">
+                            <h4 class="col_span_3">Mother's Maiden Name</h4>
+                            <div class="form_group col_span_3">
+                                <label for="surname">Surname</label>
+                                <input type="text" name="surname">
+                            </div>
+                            <div class="form_group col_span_3">
+                                <label for="firstname">Firstname</label>
+                                <input type="text" name="firstname">
+                            </div>
+                            <div class="form_group col_span_1" style="flex-direction: row; align-items: center;">
+                                <label for="fatherfirstname">Extension</label>
+                                <input type="checkbox" name="fatherfirstname" id="fatherfnameCbox"  onclick="toggleSelect('fatherfnameCbox','fatherSelect')">
+                            </div>
+                            <div class="form_group col_span_2" style="flex-direction: row; align-items: center;">
+                                <select name="fatherextension" style="display: none; margin-left: 5px; width: 50%;" id="fatherSelect">
+                                    <option value="N/A">Select</option>
+                                    <option value="junior">JR.</option>
+                                    <option value="senior">SR.</option>
+                                    <option value="the3rd">III</option>
+                                    <option value="the3rd">others...</option>
+                                </select>
+                            </div>
+                            <div class="form_group col_span_3">
+                                <label for="middlename">Middle name</label>
+                                <input type="text" name="middlename">
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="form_section" style="display: grid; grid-template-columns: 1fr">
+                        <div class="flex_row" style="justify-self: left;">
+                            <input type="checkbox" class="col_span_1" name="fatherfirstname" id="hasChild"  onclick="toggleSelect('hasChild','childSection')">
+                            <h3 class="section_label col_span_1" style="margin-left:5px;">Children</h3><br>
+                        </div>
+                        <div class="section col_span_2" id="childSection" style="display: none;">
+                            <div style="grid-column-start: 2; display: grid; grid-template-columns: repeat(2, 1fr); gap: 5px;">
+                                <button type="button" class="childFn" onclick="addFields()">Add</button>
+                                <button type="button" class="childFn" onclick="removeFields(this)">Remove</button>
+                            </div>
+                            <div class="child_info col_span_3" style="background-color: #00000000;">
+                                <div class="form_group col_span_2">
+                                    <label for="surname">Full Name</label>
+                                    <input type="text" name="surname">
+                                </div>
+                                <div class="form_group col_span_1">
+                                    <label for="firstname">Birth Date</label>
+                                    <input type="text" name="firstname">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function () {
+                            // Get the checkbox and address fields
+                            const checkbox = document.querySelector('input[name="permres"]');
+                            const resFields = document.querySelectorAll('[name^="residential_"]');
+                            const permFields = document.querySelectorAll('[name^="permanent_"]');
+                            
+                            // Function to copy values from residential to permanent fields
+                            function copyAddress() {
+                                if (checkbox.checked) {
+                                    resFields.forEach((field, index) => {
+                                        permFields[index].value = field.value;
+                                    });
+                                } else {
+                                    permFields.forEach(field => {
+                                        field.value = '';
+                                    });
+                                }
+                            }
+                            
+                            // Add event listener to the checkbox
+                            checkbox.addEventListener('change', copyAddress);
+                        });
+                    </script>
+                </div>
+                <div class="main_section">
+                    <h2 class="form_label">Educational Background</h3>
+                    <div class="form_section">
+                        <div class="section col_span_2 education grid_table">
+                            <h4 style="grid-area: 1/1/3/2;">Level</h4>
+                            <p style="grid-area: 1/2/3/3;">Name Of School</p>
+                            <p style="grid-area: 1/3/3/4;">Basic Education/Degree/Course</p>
+                            <p style="grid-area: 1/4/2/6;">Period Of attendance</p>
+                            <p style="grid-area: 2/4/3/5;">FROM</p>
+                            <p style="grid-area: 2/5/3/6;">TO</p>
+                            <p style="grid-area: 1/6/3/7;">Highest Level</p>
+                            <p style="grid-area: 1/7/3/8;">Year graduated</p>
+                            <p style="grid-area: 1/8/3/9;">Honor recieved</p>
+
+                            <h4 style="grid-area: 3/1/4/2;">Elementary</h4>
+                            <input class="table_input" type="text" style="grid-area: 3/2/4/3;">
+                            <input class="table_input" type="text" style="grid-area: 3/3/4/4;">
+                            <input class="table_input" type="text" style="grid-area: 3/4/4/5;">
+                            <input class="table_input"  class="table_input"type="text" style="grid-area: 3/5/4/6;">
+                            <input class="table_input" type="text" style="grid-area: 3/6/4/7;">
+                            <input class="table_input" type="text" style="grid-area: 3/7/4/8;">
+                            <input class="table_input" type="text" style="grid-area: 3/8/4/9;">
+
+                            <h4 style="grid-area: 4/1/5/2;">Secondary</h4>
+                            <input class="table_input" type="text" style="grid-area: 4/2/5/3;">
+                            <input class="table_input" type="text" style="grid-area: 4/3/5/4;">
+                            <input class="table_input" type="text" style="grid-area: 4/4/5/5;">
+                            <input class="table_input" type="text" style="grid-area: 4/5/5/6;">
+                            <input class="table_input" type="text" style="grid-area: 4/6/5/7;">
+                            <input class="table_input" type="text" style="grid-area: 4/7/5/8;">
+                            <input class="table_input" type="text" style="grid-area: 4/8/5/9;">
+
+                            <h4 style="grid-area: 5/1/6/2;">Tertiary</h4>
+                            <input class="table_input" type="text" style="grid-area: 5/2/6/3;">
+                            <input class="table_input" type="text" style="grid-area: 5/3/6/4;">
+                            <input class="table_input" type="text" style="grid-area: 5/4/6/5;">
+                            <input class="table_input" type="text" style="grid-area: 5/5/6/6;">
+                            <input class="table_input" type="text" style="grid-area: 5/6/6/7;">
+                            <input class="table_input" type="text" style="grid-area: 5/7/6/8;">
+                            <input class="table_input" type="text" style="grid-area: 5/8/6/9;">
+
+                            <h4 style="grid-area: 6/1/8/2;">Graduate</h4>
+                            <input class="table_input" type="text" style="grid-area: 6/2/7/3;">
+                            <input class="table_input" type="text" style="grid-area: 6/3/7/4;">
+                            <input class="table_input" type="text" style="grid-area: 6/4/7/5;">
+                            <input class="table_input" type="text" style="grid-area: 6/5/7/6;">
+                            <input class="table_input" type="text" style="grid-area: 6/6/7/7;">
+                            <input class="table_input" type="text" style="grid-area: 6/7/7/8;">
+                            <input class="table_input" type="text" style="grid-area: 6/8/7/9;">
+
+                            <input class="table_input" type="text" style="grid-area: 7/2/8/3;">
+                            <input class="table_input" type="text" style="grid-area: 7/3/8/4;">
+                            <input class="table_input" type="text" style="grid-area: 7/4/8/5;">
+                            <input class="table_input" type="text" style="grid-area: 7/5/8/6;">
+                            <input class="table_input" type="text" style="grid-area: 7/6/8/7;">
+                            <input class="table_input" type="text" style="grid-area: 7/7/8/8;">
+                            <input class="table_input" type="text" style="grid-area: 7/8/8/9;">
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <style>
+        .education{
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(7, 25px);
+            gap: 1px;
+        }
+        p{
+            text-align: left;
+            background-color: rgba(54, 54, 54, 0.26);
+        }
+        .table_input{
+            height: 25px;
+            width: 100%;
+            border-radius: 1px;
+            border: none;
+        }
+    </style>
+    <script>
+        function toggleSelect(checkboxId, selectId) {
+            const checkbox = document.getElementById(checkboxId);
+            const select = document.getElementById(selectId);
+            select.style.display = checkbox.checked ? 'block' : 'none';
+        }
+        function addFields() {
+            const childSection = document.getElementById('childSection');
+            const childInfoSection = childSection.querySelector('.child_info');
+            const newChildInfoSection = childInfoSection.cloneNode(true);
+            
+            childSection.appendChild(newChildInfoSection);
+        }
+        function removeFields(button) {
+            const childInfoSection = button.parentNode.nextElementSibling.nextElementSibling;
+            const childSection = document.getElementById('childSection');
+            
+            if (childSection.querySelectorAll('.child_info').length > 1) {
+                childSection.removeChild(childInfoSection);
+            } else {
+                const inputs = childInfoSection.querySelectorAll('input');
+                inputs.forEach(input => input.value = '');
+            }
+        }
+    </script>
+</body>
+</html>
