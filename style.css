@@ -15,7 +15,7 @@ body{
 
 .content{
     grid-column: 2/3;
-    background-color: rgb(207, 207, 207);
+    background-color: rgb(255, 255, 255);
     width: 100%;
     min-width: 400px;
     max-width: 900px;
