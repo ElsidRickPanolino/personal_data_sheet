@@ -403,7 +403,7 @@
                         <div class="section col_span_2 education grid_table">
                             <h4 style="grid-area: 1/1/3/2;">Level</h4>
                             <p style="grid-area: 1/2/3/3;">Name Of School</p>
-                            <p style="grid-area: 1/3/3/4;">Basic Education/Degree/Course</p>
+                            <p style="grid-area: 1/3/3/4;">Basic Education</p>
                             <p style="grid-area: 1/4/2/6;">Period Of attendance</p>
                             <p style="grid-area: 2/4/3/5;">FROM</p>
                             <p style="grid-area: 2/5/3/6;">TO</p>
@@ -458,6 +458,135 @@
                         </div>
                     </div>
                 </div>
+                <div class="main_section">
+                    <h2 class="form_label">Civil Service Eligibility</h3>
+                    <table id="eligibility_table">
+                        <tr>
+                            <th rowspan="2">
+                                CAREER SERVICE
+                            </th>
+                            <th rowspan="2">
+                                Rating
+                            </th>
+                            <th rowspan="2">
+                                Date of Exammination
+                            </th>
+                            <th rowspan="2">
+                                Place of Examination
+                            </th>
+                            <th colspan="2">
+                                License
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>number</th>
+                            <th>Date of validity</th>
+                        </tr>
+                        <tr class="CSE_row">
+                            <td><input type="text" class="tbl_text"></td>
+                            <td><input type="text" class="tbl_text"></td>
+                            <td><input type="text" class="tbl_text tbl_date" ></td>
+                            <td><input type="text" class="tbl_text"></td>
+                            <td><input type="text" class="tbl_text"></td>
+                            <td><input type="text" class="tbl_text tbl_date"></td>
+                        </tr>
+                        <tr class="CSE_row">
+                            <td><input type="text" class="tbl_text"></td>
+                            <td><input type="text" class="tbl_text"></td>
+                            <td><input type="text" class="tbl_text tbl_date"></td>
+                            <td><input type="text" class="tbl_text"></td>
+                            <td><input type="text" class="tbl_text"></td>
+                            <td><input type="text" class="tbl_text tbl_date"></td>
+                        </tr>
+                        <tr class="CSE_row">
+                            <td><input type="text" class="tbl_text"></td>
+                            <td><input type="text" class="tbl_text"></td>
+                            <td><input type="text" class="tbl_text tbl_date"></td>
+                            <td><input type="text" class="tbl_text"></td>
+                            <td><input type="text" class="tbl_text"></td>
+                            <td><input type="text" class="tbl_text tbl_date"></td>
+                        </tr>
+                        <tr class="CSE_row">
+                            <td><input type="text" class="tbl_text"></td>
+                            <td><input type="text" class="tbl_text"></td>
+                            <td><input type="text" class="tbl_text tbl_date"></td>
+                            <td><input type="text" class="tbl_text"></td>
+                            <td><input type="text" class="tbl_text"></td>
+                            <td><input type="text" class="tbl_text tbl_date"></td>
+                        </tr>
+                    </table>
+                    <button type="button" onclick="addRow('eligibility_table',6)" style="height: 30px;">Add Row</button>
+                </div>
+                <div class="main_section">
+                    <h2 class="form_label">Work Experience</h3>
+                    <table id="work_exp_table">
+                        <tr>
+                            <th colspan="2">
+                                Inclusive Dates
+                            </th>
+                            <th rowspan="2">
+                                Position Title
+                            </th>
+                            <th rowspan="2">
+                                Company
+                            </th>
+                            <th rowspan="2">
+                                Monthly Salary
+                            </th>
+                            <th rowspan="2">
+                                Salary Grade
+                            </th>
+                            <th rowspan="2">
+                                Status of Appointment
+                            </th>
+                            <th rowspan="2">
+                                Government Service
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>FROM</th>
+                            <th>TO</th>
+                        </tr>
+                        <tr class="CSE_row">
+                            <td><input type="text" class="tbl_text tbl_date" ></td>
+                            <td><input type="text" class="tbl_text tbl_date"></td>
+                            <td><input type="text" class="tbl_text"></td>
+                            <td><input type="text" class="tbl_text"></td>
+                            <td><input type="text" class="tbl_text"></td>
+                            <td><input type="text" class="tbl_text"></td>
+                            <td><input type="text" class="tbl_text"></td>
+                            <td><input type="text" class="tbl_text"></td>                        </tr>
+                        <tr class="CSE_row">
+                            <td><input type="text" class="tbl_text tbl_date" ></td>
+                            <td><input type="text" class="tbl_text tbl_date"></td>
+                            <td><input type="text" class="tbl_text"></td>
+                            <td><input type="text" class="tbl_text"></td>
+                            <td><input type="text" class="tbl_text"></td>
+                            <td><input type="text" class="tbl_text"></td>
+                            <td><input type="text" class="tbl_text"></td>
+                            <td><input type="text" class="tbl_text"></td>                        </tr>
+                        <tr class="CSE_row">
+                            <td><input type="text" class="tbl_text tbl_date" ></td>
+                            <td><input type="text" class="tbl_text tbl_date"></td>
+                            <td><input type="text" class="tbl_text"></td>
+                            <td><input type="text" class="tbl_text"></td>
+                            <td><input type="text" class="tbl_text"></td>
+                            <td><input type="text" class="tbl_text"></td>
+                            <td><input type="text" class="tbl_text"></td>
+                            <td><input type="text" class="tbl_text"></td>                        </tr>
+                        <tr class="CSE_row">
+                            <td><input type="text" class="tbl_text tbl_date" ></td>
+                            <td><input type="text" class="tbl_text tbl_date"></td>
+                            <td><input type="text" class="tbl_text"></td>
+                            <td><input type="text" class="tbl_text"></td>
+                            <td><input type="text" class="tbl_text"></td>
+                            <td><input type="text" class="tbl_text"></td>
+                            <td><input type="text" class="tbl_text"></td>
+                            <td><input type="text" class="tbl_text"></td>
+                        </tr>
+                    </table>
+                    <button type="button" onclick="addRow('work_exp_table',8)" style="height: 30px;">Add Row</button>
+                </div>
             </form>
         </div>
     </div>
@@ -465,15 +594,16 @@
         .education{
             display: grid;
             grid-template-columns: repeat(8, 1fr);
-            grid-template-rows: repeat(7, 25px);
+            grid-template-rows: repeat(7, 30px);
             gap: 1px;
         }
         p{
             text-align: left;
             background-color: rgba(54, 54, 54, 0.26);
+            font-size: 90%;
         }
         .table_input{
-            height: 25px;
+            height: 30px;
             width: 100%;
             border-radius: 1px;
             border: none;
@@ -483,6 +613,23 @@
             border: 2px solid #888888;
             height: 30px;
             width: 60%;
+            justify-self: center;
+        }
+        table, th, td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        .tbl_text{
+            width: 100%;
+            border: none;
+            border-radius: 0;
+        }
+        .tbl_date{
+
+        }
+        .tbl_cbx{
+            height: 25px;
+            width: 25px;
             justify-self: center;
         }
     </style>
@@ -510,6 +657,18 @@
                 inputs.forEach(input => input.value = '');
             }
         }
+        function addRow(id, col_count) {
+            var table = document.getElementById(id);
+            var row = table.insertRow(-1);
+          
+            for (var i = 0; i < col_count; i++) {
+              var cell = row.insertCell(i);
+              var input = document.createElement("input");
+              input.setAttribute("type", "text");
+              input.classList.add("tbl_text");
+              cell.appendChild(input);
+            }
+          }
     </script>
 </body>
 </html>
